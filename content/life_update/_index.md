@@ -1,4 +1,3 @@
-
 +++
 title = "life update"
 sort_by = "date"
