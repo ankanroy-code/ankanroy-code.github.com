@@ -1,0 +1,14 @@
+html {
+    font-weight: 1rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+@media screen and (min-width: 740px) {
+    body {
+        max-width: 740px;
+        margin: auto;
+    }
+}
