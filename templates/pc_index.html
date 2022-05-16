@@ -106,7 +106,7 @@
     }
 
     .blog h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .blog .posts {
@@ -126,6 +126,23 @@
         margin-bottom: 0.5rem;
         border-radius: 2rem;
     }
+
+    .blog .posts .post p {
+        margin: 0.5rem;
+    }
+
+    .blog .post a {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        color: black;
+        text-decoration: none;
+        height: 10vh;
+    }
+    
+    .blog .post span{
+        overflow: hidden;
+    }
 </style>
 
 <body>
@@ -137,8 +154,8 @@
                         <img src="/img/master.jpg" alt="owner of website">
                         <h2>Ankan Roy</h2>
                         <p>
-                            <i class="description">Blockchain and Data Science are the key to the future</i><br>
-                            <i class="description">C C++ RUST JAVASCRIPT</i>
+                            <i class="description">made with zola and pure html</i><br>
+                            <i class="description">C C++ RUST JAVASCRIPT</i><br>
                         </p>
                     </div>
                     <div class="links">
@@ -154,6 +171,10 @@
                             <img style="filter: invert();" src="/icon/youtube.svg" alt="youtube logo">
                             <h3>Youtube</h3>
                         </div>
+                        <div class="link">
+                            <img src="/icon/linkedin.svg" alt="linkedin logo">
+                            <h3>Linkedin</h3>
+                        </div>
                     </div>
                 </div>
             </center>
@@ -163,123 +184,16 @@
                     <div class="bar"></div>
                 </div>
                 <div class="posts">
-                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
-                        distinctio
-                        aut
-                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                        earum. Nemo sunt non sint sit.
-
-                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    {% set section = get_section(path="blog/_index.md") %}
+                    {% for page in section.pages %}
+                    <section class="post">
+                        <a href="{{ page.path }}">
+                            <b>{{ page.title }}</b><br>
+                            <small><i>{{ page.date}}</i><br></small>
+                            <span>{{ page.content | safe }}</span>
+                        </a>
                     </section>
-                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
-                        distinctio
-                        aut
-                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                        earum. Nemo sunt non sint sit.
-
-                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                        omnis. Consequuntur recusandae odio. Et et architecto.
-                    </section>
-                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
-                        distinctio
-                        aut
-                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                        earum. Nemo sunt non sint sit.
-
-                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                        omnis. Consequuntur recusandae odio. Et et architecto.
-                    </section>
-                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
-                        distinctio
-                        aut
-                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                        earum. Nemo sunt non sint sit.
-
-                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                        omnis. Consequuntur recusandae odio. Et et architecto.
-                    </section>
-                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
-                        distinctio
-                        aut
-                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                        earum. Nemo sunt non sint sit.
-
-                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                        omnis. Consequuntur recusandae odio. Et et architecto.
-                    </section>
-                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
-                        distinctio
-                        aut
-                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                        earum. Nemo sunt non sint sit.
-
-                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                        omnis. Consequuntur recusandae odio. Et et architecto.
-                    </section>
-                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
-                        distinctio
-                        aut
-                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                        earum. Nemo sunt non sint sit.
-
-                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                        omnis. Consequuntur recusandae odio. Et et architecto.
-                    </section>
-                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
-                        distinctio
-                        aut
-                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                        earum. Nemo sunt non sint sit.
-
-                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                        omnis. Consequuntur recusandae odio. Et et architecto.
-                    </section>
-                    <div class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
-                        distinctio
-                        aut
-                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                        earum. Nemo sunt non sint sit.
-
-                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                        omnis. Consequuntur recusandae odio. Et et architecto.
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -289,9 +203,3 @@
 </body>
 
 </html>
-<!-- <center>
-                <nav>
-                    <a href="{{ get_url(path='@/chain/_index.md') }}"><span>blockchain</span></a>
-                    <a href="{{ get_url(path='@/cooking/_index.md') }}"><span>cooking</span></a>
-                </nav>
-            </center> -->
