@@ -12,6 +12,11 @@
         box-sizing: border-box;
     }
 
+    body {
+        max-height: 100vh;
+        overflow: auto;
+    }
+
     main {
         min-height: 100vh;
         background: linear-gradient(to right top, hsl(202, 100%, 75%), hsl(0, 0%, 0%));
@@ -32,7 +37,7 @@
         backdrop-filter: blur(2rem);
         z-index: 5;
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 25% 75%;
     }
 
     .circle {
@@ -60,63 +65,65 @@
 
     .dashboard {
         display: grid;
-        grid-template-rows: 20% 80%;
-        background: linear-gradient(to right bottom, rgba(211, 211, 211, 0.7), rgba(0, 0, 0, 0.3));
-        border-top-left-radius: 2rem;
-        border-bottom-left-radius: 2rem;
+        grid-template-rows: 30% 70%;
+        height: 100%;
+        border-right: solid rgba(0, 0, 0, 0.1);
     }
 
-    .user {
+    .dashboard .user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .dashboard .user img {
+        height: 100px;
+        width: 100px;
+        border-radius: 2rem;
+    }
+
+    .dashboard .user .description {
+        display: block;
+        font-size: 0.8rem;
+        width: 80%;
+    }
+
+    .dashboard .links {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 3rem;
         justify-content: center;
-    }
-
-    .user img {
-        width: 25%;
-        height: 55%;
-        border-radius: 100%;
-    }
-
-    .links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .link {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .link h3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .blog {
+        margin: 1rem;
         display: grid;
-        grid-template-rows: 20% 80%;
-        height: max-content;
+        grid-template-rows: 10% 90%;
         height: 100%;
-        margin: 0.5rem;
+        max-height: 80vh;
+        overflow-y: scroll;
     }
 
-    .blog .title {
+    .blog h1 {
+        font-size: 2rem;
+    }
+
+    .blog .posts {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        font-size: 2.5rem;
-        align-items: baseline;
+        width: 100%;
+        overflow: scroll;
     }
-    
-    .blog .title .bar{
-        width: 10rem;
-        height: 1rem;
-        background: linear-gradient(to right bottom, rgba(211, 211, 211, 0.8), rgba(193, 248, 255, 0.1));
+
+    .blog .posts .post {
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+        height: 200px;
+        border: solid;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
         border-radius: 2rem;
     }
 </style>
@@ -124,56 +131,157 @@
 <body>
     <main>
         <section class="glass">
-            <div class="dashboard">
-                <div class="user">
-                    <img src="/img/master.jpg" alt="owner of website">
-                    <h2>Ankan Roy</h2>
-                </div>
-                <div class="links">
-                    <div class="link">
-                        <img style="filter:brightness(0)" src="/icon/twitter.svg" alt="twitter logo">
-                        <h3>Twitter</h3>
-                    </div>
-                    <div class="link">
-                        <img style="filter: invert();" src="/icon/github.svg" alt="github logo">
-                        <h3>Github</h3>
-                    </div>
-                    <div class="link">
-                        <img style="filter: invert();" src="/icon/youtube.svg" alt="youtube logo">
-                        <h3>Youtube</h3>
-                    </div>
-                </div>
-            </div>
             <center>
-                <div class="blog">
-                    <div class="title">
-                        <h1>Blog</h1>
-                        <div class="bar"></div>
+                <div class="dashboard">
+                    <div class="user">
+                        <img src="/img/master.jpg" alt="owner of website">
+                        <h2>Ankan Roy</h2>
+                        <p>
+                            <i class="description">Blockchain and Data Science are the key to the future</i><br>
+                            <i class="description">C C++ RUST JAVASCRIPT</i>
+                        </p>
                     </div>
-                    <div class="post">
-                        <p>Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi distinctio aut
-                            perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                            earum. Nemo sunt non sint sit.
-
-                            Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                            ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                            voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                            Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                            omnis. Consequuntur recusandae odio. Et et architecto.</p>
-                        <p>Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi distinctio aut
-                            perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
-                            earum. Nemo sunt non sint sit.
-
-                            Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
-                            ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
-                            voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
-
-                            Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
-                            omnis. Consequuntur recusandae odio. Et et architecto.</p>
+                    <div class="links">
+                        <div class="link">
+                            <img style="filter:brightness(0)" src="/icon/twitter.svg" alt="twitter logo">
+                            <h3>Twitter</h3>
+                        </div>
+                        <div class="link">
+                            <img style="filter: invert();" src="/icon/github.svg" alt="github logo">
+                            <h3>Github</h3>
+                        </div>
+                        <div class="link">
+                            <img style="filter: invert();" src="/icon/youtube.svg" alt="youtube logo">
+                            <h3>Youtube</h3>
+                        </div>
                     </div>
                 </div>
             </center>
+            <div class="blog">
+                <div class="title">
+                    <h1>Blog</h1>
+                    <div class="bar"></div>
+                </div>
+                <div class="posts">
+                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
+                        distinctio
+                        aut
+                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
+                        earum. Nemo sunt non sint sit.
+
+                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
+                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
+                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
+
+                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
+                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    </section>
+                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
+                        distinctio
+                        aut
+                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
+                        earum. Nemo sunt non sint sit.
+
+                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
+                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
+                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
+
+                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
+                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    </section>
+                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
+                        distinctio
+                        aut
+                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
+                        earum. Nemo sunt non sint sit.
+
+                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
+                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
+                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
+
+                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
+                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    </section>
+                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
+                        distinctio
+                        aut
+                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
+                        earum. Nemo sunt non sint sit.
+
+                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
+                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
+                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
+
+                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
+                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    </section>
+                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
+                        distinctio
+                        aut
+                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
+                        earum. Nemo sunt non sint sit.
+
+                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
+                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
+                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
+
+                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
+                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    </section>
+                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
+                        distinctio
+                        aut
+                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
+                        earum. Nemo sunt non sint sit.
+
+                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
+                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
+                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
+
+                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
+                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    </section>
+                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
+                        distinctio
+                        aut
+                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
+                        earum. Nemo sunt non sint sit.
+
+                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
+                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
+                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
+
+                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
+                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    </section>
+                    <section class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
+                        distinctio
+                        aut
+                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
+                        earum. Nemo sunt non sint sit.
+
+                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
+                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
+                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
+
+                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
+                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    </section>
+                    <div class="post">Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi
+                        distinctio
+                        aut
+                        perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
+                        earum. Nemo sunt non sint sit.
+
+                        Quia repellendus est commodi officiis magnam non omnis. Occaecati rerum qui reiciendis non
+                        ut iste. In mollitia consectetur culpa delectus. Error officia quo possimus quisquam ut
+                        voluptatem sunt necessitatibus eos. Commodi earum eos deleniti et ut neque non.
+
+                        Distinctio nobis fugit. Officiis et eaque est autem perspiciatis modi nobis. Magnam a beatae
+                        omnis. Consequuntur recusandae odio. Et et architecto.
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <div class="circle"></div>
