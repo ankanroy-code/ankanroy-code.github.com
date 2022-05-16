@@ -74,8 +74,8 @@
     }
 
     .user img {
-        width: 20%;
-        height: 45%;
+        width: 25%;
+        height: 55%;
         border-radius: 100%;
     }
 
@@ -102,13 +102,22 @@
         grid-template-rows: 20% 80%;
         height: max-content;
         height: 100%;
+        margin: 0.5rem;
     }
-    
-    .blog .title{
+
+    .blog .title {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
         font-size: 2.5rem;
+        align-items: baseline;
+    }
+    
+    .blog .title .bar{
+        width: 10rem;
+        height: 1rem;
+        background: linear-gradient(to right bottom, rgba(211, 211, 211, 0.8), rgba(193, 248, 255, 0.1));
+        border-radius: 2rem;
     }
 </style>
 
@@ -126,7 +135,7 @@
                         <h3>Twitter</h3>
                     </div>
                     <div class="link">
-                        <img  style="filter: invert();" src="/icon/github.svg" alt="github logo">
+                        <img style="filter: invert();" src="/icon/github.svg" alt="github logo">
                         <h3>Github</h3>
                     </div>
                     <div class="link">
@@ -137,7 +146,10 @@
             </div>
             <center>
                 <div class="blog">
-                    <h1 class="title">Blog</h1>
+                    <div class="title">
+                        <h1>Blog</h1>
+                        <div class="bar"></div>
+                    </div>
                     <div class="post">
                         <p>Quis neque deleniti culpa aut veniam nesciunt. Dicta dolore eveniet modi distinctio aut
                             perspiciatis et. Odio temporibus vel placeat soluta natus. Laboriosam doloremque magni
