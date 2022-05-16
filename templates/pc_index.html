@@ -67,7 +67,7 @@
         display: grid;
         grid-template-rows: 30% 70%;
         height: 100%;
-        border-right: solid rgba(0, 0, 0, 0.1);
+        border-right: solid rgba(106, 245, 255, 0.3);
     }
 
     .dashboard .user {
@@ -121,10 +121,13 @@
         flex-direction: column;
         width: 98%;
         height: 200px;
-        border: solid;
+        border: solid rgba(106, 245, 255, 0.3); 
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         border-radius: 2rem;
+    }
+    .blog .posts .post:hover{
+        border: solid aquamarine; 
     }
 
     .blog .posts .post p {
@@ -143,6 +146,14 @@
     .blog .post span{
         overflow: hidden;
     }
+
+    .dashboard .link{
+        text-decoration: none;
+        color: black;
+    }
+    .dashboard .link:hover{
+        color: aquamarine;
+    }
 </style>
 
 <body>
@@ -154,27 +165,28 @@
                         <img src="/img/master.jpg" alt="owner of website">
                         <h2>Ankan Roy</h2>
                         <p>
-                            <i class="description">made with zola and pure html</i><br>
-                            <i class="description">C C++ RUST JAVASCRIPT</i><br>
+                        <br>
+                            <i class="description">i made this with zola, zola links all the 
+                                html and css files together</i><br>
                         </p>
                     </div>
                     <div class="links">
-                        <div class="link">
+                        <a href="https://twitter.com/anknroy" class="link">
                             <img style="filter:brightness(0)" src="/icon/twitter.svg" alt="twitter logo">
                             <h4>Twitter</h4>
-                        </div>
-                        <div class="link">
+                        </a>
+                        <a href="https://github.com/ankanroy-code" class="link">
                             <img style="filter: invert();" src="/icon/github.svg" alt="github logo">
                             <h4>Github</h4>
-                        </div>
-                        <div class="link">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCTzdtvDn4_O9EhERTYzkSSQ" class="link">
                             <img style="filter: invert();" src="/icon/youtube.svg" alt="youtube logo">
                             <h4>Youtube</h4>
-                        </div>
-                        <div class="link">
+                        </a>
+                        <a href="https://www.linkedin.com/in/ankan-roy-683169134/" class="link">
                             <img src="/icon/linkedin.svg" alt="linkedin logo">
                             <h4>Linkedin</h4>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </center>
