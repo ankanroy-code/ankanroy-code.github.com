@@ -14,6 +14,7 @@
     src: url("/font/FiraCode-VF.woff");
 }
 
+
 :root {
     --clr-primary-300: #D89216;
     --clr-primary-400: #898e91;
@@ -22,7 +23,7 @@
     --clr-neutral-900: #2C061F;
     --clr-neutral-800: #360727;
     --clr-neutral-700: #300f25;
-
+                                                
     --ff-primary: "Comic Mono", sans-serif;
     --ff-accent: "Fira Code", serif;
 }
@@ -37,7 +38,7 @@ body {
     background: var(--clr-neutral-900);
     color: var(--clr-primary-100);
 }
-
+b
 h1,
 h2 {
     font-family: var(--ff-accent);
