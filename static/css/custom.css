@@ -99,7 +99,7 @@ p {
     }
 }
 
-code{
+code {
     display: block;
     background-color: var(--clr-neutral-800);
     text-align: start;
@@ -107,33 +107,45 @@ code{
     overflow: scroll;
 }
 
-.blog{
+.blog {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
     width: 80%;
     max-height: 70vh;
-    overflow: scroll;
-}
-.blog *{
-    margin: 0;
-    padding: 0 ;
-}
-.blog a{
-    text-decoration: none;
-    color: var(--clr-primary-100);
+    overflow-y: scroll;
 }
 
-.post{
+.blog * {
+    margin: 0;
+    padding: 0;
+}
+
+.blog a {
+    text-decoration: none;
+    color: var(--clr-primary-100);
+    font-size: 1.3rem;
+    text-decoration: dashed;
+}
+
+.blog-body a {
+    background-color: var(--clr-neutral-700);
+    color: var(--clr-primary-300);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.post {
     background-color: var(--clr-neutral-700);
     margin: 1em 0;
 }
 
-.post:hover{
+.post:hover {
     border: solid var(--clr-primary-100);
 }
 
-b,i{
+b,
+i {
     color: var(--clr-primary-400);
 }
