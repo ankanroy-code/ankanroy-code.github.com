@@ -146,6 +146,8 @@ code {
 }
 
 b,
-i {
+i,
+strong,
+em {
     color: var(--clr-primary-400);
 }
