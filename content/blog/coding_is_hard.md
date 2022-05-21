@@ -1,8 +1,8 @@
 +++
 date = 2020-02-21
-title = "coding is hard"
+title = "coding is easy"
 [extra]
-text= "making website was easy selecting color was hard"
+text= "making website is easy getting content is hard. Of course you can write bullshit and make content but that is not what i want..."
 +++
 
 So for a long time I have been trying to make a decently functional website, but it failed. Sometime due to wrong layout, sometimes due to too poor font and color choice, But this time I fell like I have made a good come back.
