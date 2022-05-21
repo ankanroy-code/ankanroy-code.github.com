@@ -16,7 +16,7 @@
 
 :root {
     --clr-primary-300: #D89216;
-    --clr-primary-600: #374045;
+    --clr-primary-400: #898e91;
 
     --clr-primary-100: #E1D89F;
     --clr-neutral-900: #2C061F;
@@ -113,6 +113,7 @@ code{
     margin: 0;
     padding: 0;
     width: 80%;
+    max-height: 70vh;
 }
 .blog *{
     margin: 0;
@@ -130,4 +131,8 @@ code{
 
 .post:hover{
     border: solid var(--clr-primary-100);
+}
+
+b,i{
+    color: var(--clr-primary-400);
 }
