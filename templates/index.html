@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/custom.css">
+    <title>Responsive</title>
+</head>
 
 <body>
-  <h1>CHECKING</h1>
+    <div class="text-center">
+
+        <div class="head">
+            <p>Lorem, ipsum dolor.</p>
+            <h1>Blog is the best way to tell a story</h1>
+        </div>
+
+        <div class="container">
+            <h2>Some of my info</h2>
+            <section class="split">
+                <div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat ad quae quibusdam iste
+                        eligendi ab tempore sapiente aspernatur, porro excepturi similique mollitia commodi id odit!</p>
+                </div>
+                <div>
+                    <p>Pariatur corporis recusandae facilis quo dolor animi cumque eaque distinctio, earum sint odit
+                        quibusdam cupiditate modi corrupti reiciendis delectus impedit architecto repudiandae
+                        necessitatibus ullam incidunt.</p>
+                </div>
+            </section>
+            <center>
+                <h2>Blog</h2>
+                <div class="blog">
+                    {% set section = get_section(path="blog/_index.md") %}
+                    {% for page in section.pages %}
+                    <section class="post">
+                    <a href="{{ page.path }}">
+                        <b>{{ page.title }}</b><br>
+                        <small><i>{{ page.date}}</i><br></small>
+                        <span>{{ page.extra.text }}</span>
+                    </a>
+                    </section>
+                    {% endfor %}
+                </div>
+            </center>
+        </div>
+    </div>
 </body>
-<script>
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    // true for mobile device
-    document.write("s000ry mobile-device supported is under construction");
-  } else {
-    // false for not mobile device
-    document.write("not mobile device");
-    // var url = "http://127.0.0.1:1111/pc/"
-    var url = "https://ankanroy-code.github.io/pc/"
-    console.log(url)
-    window.location.replace(url);
-  }
-</script>
 
 </html>
