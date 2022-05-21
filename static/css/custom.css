@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Comic Mono";
+    src: url("/font/ComicMono");
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("/font/FiraCode-VF.woff");
+}
+
 :root {
     --clr-primary-300: #D89216;
     --clr-primary-600: #374045;
