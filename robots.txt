@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ankanroy-code.github.io/sitemap.xml
