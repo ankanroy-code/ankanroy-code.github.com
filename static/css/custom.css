@@ -38,9 +38,9 @@ body {
     background: var(--clr-neutral-900);
     color: var(--clr-primary-100);
 }
-b
+
 h1,
-h2 {
+h2{
     font-family: var(--ff-accent);
     color: var(--clr-primary-300);
     font-weight: 900;
@@ -147,4 +147,5 @@ i,
 strong,
 em {
     color: var(--clr-primary-400);
+    font-family: var(--ff-accent);
 }
